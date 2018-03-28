@@ -26,8 +26,8 @@
         var formattedList = ""
 
         for (var i in EXERCISES) {
-            var exe = EXERCISES[i]
-            formattedList = formattedList + "<a href=\"exercise.html?id=" + exe.id + "\" class=\"button\">" + exe.id + "</a>"
+            var exe = EXERCISES[i];
+            formattedList = formattedList + "<a href=\"exercise.html?id=" + exe.id + "\" class=\"button\">" + exe.id + "</a>";
         }
 
         document.getElementById("drawer").innerHTML = formattedList;
