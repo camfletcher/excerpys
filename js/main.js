@@ -35,7 +35,7 @@ var EXERCISES = [
         title: "Wordsmith",
         description: "You have been given a list of words that need to be sorted before they're added to the dictionary! Write a program that will sort each word alphanumerically and outputs a string containing the sorted words.",
         code: "https://gist.github.com/camfletcher/95cf5fb25273d18775f0051d3d669123",
-        skeleton: "https://google.com",
+        skeleton: "https://gist.github.com/camfletcher/9bf0d5c6451bdf5b7ecd05cb8134241f",
         steps: [
             "Print a string containing all the inputted words, sorted alphanumerically",
             "Print a string containing the number of words in your output",
