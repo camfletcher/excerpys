@@ -33,7 +33,7 @@ var EXERCISES = [
     {
         id: 2,
         title: "Wordsmith",
-        description: "",
+        description: "You have been given a list of words that need to be sorted before they're added to the dictionary! Write a program that will sort each word alphanumerically and outputs a string containing the sorted words.",
         code: "https://gist.github.com/camfletcher/95cf5fb25273d18775f0051d3d669123",
         skeleton: "https://google.com",
         steps: [
@@ -43,7 +43,9 @@ var EXERCISES = [
         ],
         form: [
             { id: 1, question: "What are the first 10 words that start with 'b'? (ex: \"wordOne wordTwo wordThree\"...)", answer: "baby back background bacon bad bag bait bake balance bald" },
-            { id: 2, question: "How many words are there total in the output?", answer: 2971 }
+            { id: 2, question: "How many words start with an 'L'?", answer: 111 },
+            { id: 3, question: "How many words start with a 'V'?", answer: 48 },
+            { id: 4, question: "What word comes after 'x-ray'?", answer: "yard" }
         ]
     }
 ]
