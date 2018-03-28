@@ -28,7 +28,7 @@ var EXERCISES = [
             { id: 2, question: "How much garbage (total) was received on Day 6?", answer: 6931 },
             { id: 3, question: "Which type of garbage was most received on Day 4?", answer: "trash" }
         ],
-        finish_code: 19701
+        finish_code: "19701"
     },
     {
         id: 2,
@@ -46,7 +46,8 @@ var EXERCISES = [
             { id: 2, question: "How many words start with an 'L'?", answer: 111 },
             { id: 3, question: "How many words start with a 'V'?", answer: 48 },
             { id: 4, question: "What word comes after 'x-ray'?", answer: "yard" }
-        ]
+        ],
+        finish_code: "197"
     }
 ]
 
