@@ -23,8 +23,9 @@ var EXERCISES = [
             "Print the sum of all the items collected for each day"
         ],
         form: [
-            { id: 1, question: "How much garbage (total) was received on Day 1?", answer: 10 },
-            { id: 2, question: "How much garbage (total) was received on Day 6?", answer: 20 }
+            { id: 1, question: "How much garbage (total) was received on Day 1?", answer: 7940 },
+            { id: 2, question: "How much garbage (total) was received on Day 6?", answer: 6931 },
+            { id: 3, question: "Which type of garbage was most received on Day 4?", answer: "trash" }
         ],
         finish_code: 19701
     }

@@ -67,6 +67,7 @@
                     if (isNaN(i)) continue;
                     var input = form.elements[i].value;
                     var answer = exercise.form[i].answer;
+                    if (typeof answer == string) answer = answer.toLowerCase()
 
                     if (input != answer) {
                         form.innerHTML = "<b style=\"color: indianred;\">Invalid answer! Refresh the page to try again!</b>"
