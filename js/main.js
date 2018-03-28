@@ -17,6 +17,7 @@ var EXERCISES = [
         title: "The First Exercise",
         description: "You work at a waste management facility and your employer needs you to write a program that can be used to provide statistics about the daily intake of waste the facility receives.<br>There are 3 types of garbage: \"t\" (trash), \"r\" (recycleable), \"f\" (food).<br>Your program will be supplied an input that looks similar to \"rrftftff\" and you will have to use that input to complete the tasks mentioned below. You will have a different string of characters to represent 7 days worth of garbage collection. (If you're confused, refer to the input provided.)",
         code: "https://gist.github.com/camfletcher/eef8f1d6c93e0c949db8c1c55d845cb4",
+        skeleton: "https://gist.github.com/camfletcher/3ca415e62e4f0bac1a9f41e892f934e3",
         steps: [
             "Print the number of each type of garbage that was received per day",
             "Print the most common type of trash received per day",

@@ -29,6 +29,7 @@
         <br>
         <div class="drawer spaced">
             <a id="input" target="_blank" href="" class="button">Input</a>
+            <a id="skeleton" target="_blank" href="" class="button">Skeleton Code</a>
         </div>
         <br>
         <p class="task"><b>YOUR TASK: </b><i>(Your application must...)</i></p>
@@ -87,7 +88,8 @@
         var exercise = getExercise(id);
         document.getElementById("title").innerHTML = exercise.title;
         document.getElementById("desc").innerHTML = exercise.description;
-        document.getElementById("input").href = exercise.code
+        document.getElementById("input").href = exercise.code;
+        document.getElementById("skeleton").href = exercise.skeleton;
 
         var formattedTask = "";
         for (let i in exercise.steps)
