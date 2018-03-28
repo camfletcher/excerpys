@@ -45,9 +45,10 @@ var EXERCISES = [
             { id: 1, question: "What are the first 10 words that start with 'b'? (ex: \"wordOne wordTwo wordThree\"...)", answer: "baby back background bacon bad bag bait bake balance bald" },
             { id: 2, question: "How many words start with an 'L'?", answer: 111 },
             { id: 3, question: "How many words start with a 'V'?", answer: 48 },
-            { id: 4, question: "What word comes after 'x-ray'?", answer: "yard" }
+            { id: 4, question: "What word comes after 'x-ray'?", answer: "yard" },
+            { id: 5, question: "What word comes after 'dressing'?", answer: "dribble" }
         ],
-        finish_code: "197"
+        finish_code: "19703"
     }
 ]
 
