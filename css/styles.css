@@ -1,0 +1,103 @@
+/* 
+    Generics
+*/
+body {
+    background-color: rgb(226, 237, 255);
+    font-family: 'Roboto Mono', monospace;
+}
+
+button, input, select, textarea {
+    font-family : inherit;
+    font-size   : 100%;
+}
+
+.tabbed {
+    padding-left: 10%;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+.submit {
+    background-color: #54627a;
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.drawer {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.spaced {
+    justify-content: space-evenly;
+}
+
+/* 
+    Landing
+*/
+.landing {
+    padding: 30vh;
+    line-height: 1em
+}
+
+.landing > .title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.landing > .description, .author {
+    color: gray;
+    text-align: center;
+}
+
+/* 
+    Excercise Site
+*/
+.main {
+    padding: 15vh;
+    line-height: 1em
+}
+
+.main > .title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.main > .description {
+    display: flex;
+    align-content: center;
+    color: gray;
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.main > .task {
+    padding-left: 10%;
+    color: indianred;
+}

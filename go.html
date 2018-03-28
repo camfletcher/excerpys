@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Excerpys</title>
+    <meta name="description" content="A simple website designed for CSE exercises">
+    <meta name="author" content="Cameron Fletcher">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+    <div class="landing">
+        <h1 class="title">Select an exercise</h1>
+        <p class="description">You will be prompted to input your results upon choosing...</p>
+        <br>
+        <br>
+        <div id="drawer" class="drawer spaced">
+            <a href="exercise.html?id=1" class="button">1</a>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        var formattedList = ""
+
+        for (var i in EXERCISES) {
+            var exe = EXERCISES[i]
+            formattedList = formattedList + "<a href=\"exercise.html?id=" + exe.id + "\" class=\"button\">" + exe.id + "</a>"
+        }
+
+        document.getElementById("drawer").innerHTML = formattedList;
+    </script>
+</body>
+</html>
