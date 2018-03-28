@@ -42,7 +42,7 @@ var EXERCISES = [
             "Print the number of words each character in the alphabet has in your output"
         ],
         form: [
-            { id: 1, question: "What are the first 10 words that start with 'b'? (ex: \"wordOne wordTwo wordThree ...\")", answer: "baby back background bacon bad bag bait bake balance bald" },
+            { id: 1, question: "What are the first 10 words that start with 'b'? (ex: \"wordOne wordTwo wordThree\"...)", answer: "baby back background bacon bad bag bait bake balance bald" },
             { id: 2, question: "How many words are there total in the output?", answer: 2971 }
         ]
     }
