@@ -10,7 +10,7 @@ function getUrlParameters(parameter, staticURL, decode) {
         } else return false;
     }
 }
-
+//r
 var EXERCISES = [
     {
         id: 1,
