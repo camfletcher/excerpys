@@ -28,6 +28,10 @@ const EXERCISES = [
             "Print a string containing the number of words in your output",
             "Print the number of words each character in the alphabet has in your output"
         ],
+        examples: [
+            "'book duck apple car' -> 'apple book car duck' (a words = 1, b words = 1, c words = 1, d words = 1, ...)",
+            "'cream book dingo baby' -> 'baby book cream dingo' (a words = 0, b words = 2, c words = 1, d words = 0, ...)"
+        ],
         form: [
             { id: 1, question: "What are the first 10 words that start with 'b'? (ex: \"wordOne wordTwo wordThree\"...)", answer: "baby back background bacon bad bag bait bake balance bald" },
             { id: 2, question: "How many words start with an 'L'?", answer: 111 },
@@ -46,11 +50,15 @@ const EXERCISES = [
         steps: [
             "If a character has a repeating EVEN number, add the value of the current number to your output",
             "If a character has a repeating ODD number, subtract that value of the current number from your output",
-            "If a character does NOT have a repeating character, multiply the current output by 0.5",
-            "Print the calculated output (should be a decimal)"
+            "If a character does NOT have a repeating character, add 1 to your output",
+            "Print the calculated output"
+        ],
+        examples: [
+            "'55567' should output: '-8' ('555' repeats 3 times, so 10 would be SUBTRACTED b/c 5 is the next character twice)",
+            "'12345' should output: '4' (no repeats, so just always add 1)"
         ],
         form: [
-            { id: 1, question: "What is the calculated number?", answer: -0.883302189894 }
+            { id: 1, question: "What is the calculated number?", answer: 8780 }
         ],
         finish_code: "19705"
     }

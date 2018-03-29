@@ -32,6 +32,11 @@
             <p>* Two</p>
             <p>* three</p>
         </ul>
+        <div id="examples" class="tabbed">
+            <br>
+            <p><b>EXAMPLES:</b></p>
+            <ul id="example-list"></ul>
+        </div>
         <br><hr>
         <div class="tabbed">
             <br><br>
@@ -65,6 +70,9 @@
             var { question, id } = exercise.form[i];
             getElm("quiz").innerHTML += question + "<br><br>" + toHtml("input", ['type="text"', 'name="question' + id + '"']) + "<br><br>";
         });
+        if (exercise.examples)
+            repeat(exercise.examples.length, (i) => getElm("example-list").innerHTML += toHtml("p", [], "* " + exercise.examples[i]))
+        else getElm("examples").innerHTML = ""
         
         getElm("quiz").innerHTML += toHtml("a", ['class="button submit"', 'href="javascript:checkForm(getDefaultExercise(), getElm(\'quiz\'))"'], "SUBMIT");
     </script>
