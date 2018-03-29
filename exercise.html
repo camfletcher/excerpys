@@ -12,19 +12,13 @@
 </head>
 
 <body>
+    <script src="js/config.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        var id = getUrlParameters("id", "", true);
-        var exercise = getExercise(id);
-
-        if (!exercise)
-            window.location.href = "./error.html"
-    </script>
+    <script src="js/quiz.js"></script>
+    <script>if (!getDefaultExercise()) window.location.href = "./error.html"</script>
     <div class="main">
         <h2 id="title" class="title">Title</h1></p>
-        <br>
-        <hr>
-        <br>
+        <br><hr><br>
         <p id="desc" class="description">Description</p>
         <br>
         <div class="drawer spaced">
@@ -38,75 +32,41 @@
             <p>* Two</p>
             <p>* three</p>
         </ul>
-        <br>
-        <hr>
+        <br><hr>
         <div class="tabbed">
-            <br>
-            <br>
+            <br><br>
             <b>RESULTS:</b> <i>(Input your answers into the form below...)</i>
-            <br>
-            <br>
+            <br><br>
             <form id="quiz">
                 Question One:
                 <br>
-                <input type="text" name="question1" value="Default"><br><br>
-
+                <input type="text" name="question1" value="Default">
+                <br><br>
                 Question Two:
                 <br>
-
-                <input type="text" name="question1" value="Default"><br><br>
-                <input type="submit" value="Submit" href="javascript:alert('hello')">
+                <input type="text" name="question1" value="Default">
+                <br><br>
+                <input type="submit" value="Submit" href="">
             </form>
         </div>
     </div>
     <script>
-        function handle(exercise, form) {
-            // thanks ben!!!!
-            var failed = false;
-            for (var i = 0; i < exercise.form.length; i++) {
-                try {
-                    if (isNaN(i)) continue;
-                    var input = form.elements[i].value;
-                    var answer = exercise.form[i].answer;
-                    if (typeof answer == "string") answer = answer.toLowerCase()
+        var exercise = getDefaultExercise();
+        getElm("title").innerHTML = exercise.title;
+        getElm("desc").innerHTML = exercise.description;
+        getElm("input").href = exercise.code;
+        getElm("skeleton").href = exercise.skeleton;
 
-                    if (input != answer) {
-                        form.innerHTML = "<b style=\"color: indianred;\">Invalid answer! Refresh the page to try again!</b>"
-                        failed = true;
-                        break;
-                    }
-                } catch (e) {
-                    console.error(e);
-                }
-            }
+        getElm("task").innerHTML = "";
+        getElm("quiz").innerHTML = "";
 
-            if (!failed)
-                form.innerHTML = "<b style=\"color: #4CAF50;\">Correct! Show this screen/code to an instructor to receive credit! [Code: " + exercise.finish_code + "]</b>"
-        }
-
-        var id = getUrlParameters("id", "", true);
-        var exercise = getExercise(id);
-        document.getElementById("title").innerHTML = exercise.title;
-        document.getElementById("desc").innerHTML = exercise.description;
-        document.getElementById("input").href = exercise.code;
-        document.getElementById("skeleton").href = exercise.skeleton;
-
-        var formattedTask = "";
-        for (let i in exercise.steps)
-            formattedTask = formattedTask + "<p><b>[*]</b> " + exercise.steps[i] + "</p>"
-
-        document.getElementById("task").innerHTML = formattedTask;
-
-        var formattedForm = "";
-        for (let i in exercise.form) {
-            var formQuestion = exercise.form[i];
-            var id = formQuestion.id;
-            var question = formQuestion.question;
-            formattedForm = formattedForm + question + "<br><br><input type=\"text\" name=\"question" + id + "\"><br><br>";
-        }
-        // i hate myself
-        formattedForm = formattedForm + "<a class=\"button submit\" href=\"javascript:handle(getExercise(getUrlParameters('id', '', true)), document.getElementById('quiz'))\">Submit</a>"
-        document.getElementById("quiz").innerHTML = formattedForm;
+        repeat(exercise.steps.length, (i) => getElm("task").innerHTML += toHtml("p", [], "<b>[*]</b> " + exercise.steps[i]));
+        repeat(exercise.form.length, (i) => {
+            var { question, id } = exercise.form[i];
+            getElm("quiz").innerHTML += question + "<br><br>" + toHtml("input", ['type="text"', 'name="question' + id + '"']) + "<br><br>";
+        });
+        
+        getElm("quiz").innerHTML += toHtml("a", ['class="button submit"', 'href="javascript:checkForm(getDefaultExercise(), getElm(\'quiz\'))"'], "SUBMIT");
     </script>
 </body>
 </html>

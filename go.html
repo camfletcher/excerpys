@@ -12,25 +12,17 @@
 </head>
 
 <body>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
     <div class="landing">
         <h1 class="title">Select an exercise</h1>
         <p class="description">You will be prompted to input your results upon choosing...</p>
-        <br>
-        <br>
-        <div id="drawer" class="drawer spaced">
-            <a href="exercise.html?id=1" class="button">1</a>
-        </div>
+        <br><br>
+        <div id="drawer" class="drawer spaced"></div>
     </div>
-    <script src="js/main.js"></script>
-    <script>
-        var formattedList = ""
-
-        for (var i in EXERCISES) {
-            var exe = EXERCISES[i];
-            formattedList = formattedList + "<a href=\"exercise.html?id=" + exe.id + "\" class=\"button\">" + exe.id + "</a>";
-        }
-
-        document.getElementById("drawer").innerHTML = formattedList;
+    <script>        
+        repeat(EXERCISES.length, (i) =>
+            getElm("drawer").innerHTML += toHtml("a", ["href='exercise.html?id=" + EXERCISES[i].id + "'", "class='button'"], "" + EXERCISES[i].id));
     </script>
 </body>
 </html>
