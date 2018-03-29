@@ -46,8 +46,8 @@ const EXERCISES = [
         steps: [
             "If a character has a repeating EVEN number, add the value of the current number to your output",
             "If a character has a repeating ODD number, subtract that value of the current number from your output",
-            "If a character does NOT have a repeating characer, multiply the current output by .5",
-            "Print the calculated output"
+            "If a character does NOT have a repeating character, multiply the current output by 0.5",
+            "Print the calculated output (should be a decimal)"
         ],
         form: [
             { id: 1, question: "What is the calculated number?", answer: -0.883302189894 }
