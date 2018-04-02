@@ -15,11 +15,11 @@ const EXERCISES = [
             "'cream book dingo baby' -> 'baby book cream dingo' (a words = 0, b words = 2, c words = 1, d words = 0, ...)"
         ],
         form: [
-            { id: 1, question: "What are the first 10 words that start with 'b'? (ex: \"wordOne wordTwo wordThree\"...)", answer: "baby back background bacon bad bag bait bake balance bald" },
-            { id: 2, question: "How many words start with an 'L'?", answer: 111 },
-            { id: 3, question: "How many words start with a 'V'?", answer: 48 },
-            { id: 4, question: "What word comes after 'x-ray'?", answer: "yard" },
-            { id: 5, question: "What word comes after 'dressing'?", answer: "dribble" }
+            { id: 1, question: "What are the first 10 words that start with 'b'? (ex: \"wordOne wordTwo wordThree\"...)", answer: "babies back bait balance ball ban bare base baseball basketball" },
+            { id: 2, question: "How many words start with an 'L'?", answer: 56 },
+            { id: 3, question: "How many words start with a 'V'?", answer: 20 },
+            { id: 4, question: "What word comes after 'x-ray'?", answer: "yam" },
+            { id: 5, question: "What word comes after 'depend'?", answer: "depressed" }
         ],
         finish_code: "19703"
     },
