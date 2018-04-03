@@ -37,7 +37,7 @@ const EXERCISES = [
         form: [
             { id: 1, question: "How much garbage (total) was received on Day 1?", answer: 7940 },
             { id: 2, question: "How much garbage (total) was received on Day 6?", answer: 6931 },
-            { id: 3, question: "Which type of garbage was most received on Day 4?", answer: "recycling" }
+            { id: 3, question: "Which type of garbage was most received on Day 4? (t/r/f)", answer: "r" }
         ],
         finish_code: "19701"
     },
