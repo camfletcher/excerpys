@@ -19,5 +19,5 @@ function checkForm(exercise, form) {
     }
 
     if (!failed)
-        form.innerHTML = toHtml("b", ["style='color: #4CAF50;'"], "Correct! Show this scrren to an instructor to receive credit! [Code: " + exercise.finish_code + "]");
+        form.innerHTML = toHtml("b", ["style='color: #4CAF50;'"], "Correct! Show this screen to an instructor to receive credit! [Code: " + exercise.finish_code + "]");
 }
